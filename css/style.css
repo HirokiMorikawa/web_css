@@ -1,0 +1,223 @@
+@CHARSET "UTF-8";
+body {
+    /*
+     * フォントサイズ・フォント
+     */
+    font-family: "メイリオ", "Meiryo, Osaka", "MS PGothic", 'Slabo 27px', serif;
+    font-size: 62.5%;
+    /*
+     * 背景の色
+     */
+    background-color: #FFFFFF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #FFFFFF;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    position: relative;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+nav ul {
+    font-size: 2.5em;
+}
+
+nav ul.gnav {
+    display: flex;
+}
+
+nav ul.gnav .left {
+    margin-right: auto;
+}
+
+nav ul.gnav .left > li {
+    margin-left: 2em;
+}
+
+nav ul.gnav .right {
+    display: flex;
+    margin-right: 5em;
+}
+
+nav ul.gnav .right > li {
+    margin-left: 2em;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+h1.top {
+    font-size: 2em;
+}
+
+h2.middleTop {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h2.middle {
+    font-size: 1.8em;
+}
+
+p.middleStatement {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h4 {
+
+}
+
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#topExp {
+    font-size: 1.8em;
+}
+
+.component {
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-bottom: 5em;
+    background: #f5f5f5;
+    position: relative;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.component #topPicSide {
+    width: 100%;
+    height: auto;
+}
+
+.component h2.middleTop {
+    font-size: 1.8em;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.component .circlePic {
+    dislay: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.squere {
+    width: 400px;
+    height: 400px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto 3fr;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.5em;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.grid #tL {
+    grid-row: 1 /2;
+    grid-column: 1 /2;
+}
+.grid #bL {
+    grid-row: 2 /3;
+    grid-column: 1 /2;
+}
+
+.grid #tM {
+    grid-row: 1 /2;
+    grid-column: 2 /3;
+}
+
+.grid #bM {
+    grid-row: 2 /3;
+    grid-column: 2 /3;
+}
+
+.grid #tR {
+    grid-row: 1 /2;
+    grid-column: 3 /4;
+}
+.grid #bR {
+    grid-row: 2 /3;
+    grid-column: 3 /4;
+}
+
+.gridPanel {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 20% 10% 70%;
+}
+
+.gridPanel #s1 {
+    grid-row: 1 /2;
+    grid-column: 1 /2;
+}
+
+.gridPanel #s2 {
+    grid-row: 2 /3;
+    grid-column: 1 /3;
+}
+
+.gridPanel #p {
+    grid-row: 1 /2;
+    grid-column: 2 /4;
+}
+
+.gridPanel #b {
+    grid-row: 2 /3;
+    grid-column: 3 /4;
+}
+
+.gridPanel2 {
+    display: grid;
+    grid-template-row: 200px;
+    grid-template-column: 20% 80%;
+}
+
+.gridPanel2 #left {
+    grid-row: 1 /2;
+    grid-column: 1/2;
+}
+
+.gridPanel2 #left p {
+    word-wrap: break-word;
+}
+
+.gridPanel2 #right {
+    grid-row: 1 /2;
+    grid-column: 2/3;
+}
+
+.gridPanel2 #right .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.component2 {
+    margin-bottom: 5em;
+}
+

@@ -1,0 +1,550 @@
+@CHARSET "UTF-8";
+
+/*
+ * css breakpoint 800px to set media query
+ */
+
+body {
+    /*
+     * フォントサイズ・フォント
+     */
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+    /*
+     * マージンなどを相対的に決めるためフォントサイズを62.5%とする
+     */
+    font-size: 62.5%;
+    /*
+     * 背景の色
+     */
+    background-color: #FFFFFF;
+    /*
+     * css 最大幅
+     */
+    max-width: 2000px;
+    /*
+     min-width: 800px;
+     */
+    /*
+     * マージンを自動化する
+     */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    /*
+     * すべての要素の外側マージンと内側マージンを0に設定する
+     */
+    margin: 0;
+    padding: 0;
+    /*
+     * 折り返し設定
+     */
+    font-weight: normal;
+}
+
+/*
+ * 基本タグレイアウト設定
+ */
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.9em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.7em;
+}
+
+p, li, em {
+    font-size: 1.5em;
+}
+ul {
+    list-style: none;
+}
+
+/*
+ *画像のtop部分
+ */
+img.topImg {
+    display: block;
+    max-width: 750px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+}
+
+/**
+ *     画像の円形
+ */
+img.cir {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.dark {
+    background: #e6e6fa;
+}
+
+/*
+ * メディアクエリ ウィンドウサイズ 800px以下の時
+ */
+@media all and (max-width: 800px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    h4 {
+        font-size: 1.6em;
+    }
+
+    p, li, em {
+        font-size: 1.4em;
+    }
+}
+
+/*********************
+ *  グローバルナビゲーション
+ */
+
+header {
+    box-shadow: 1px 1px 1px 1px #777;
+    background: #FFFFFF;
+}
+
+header .head {
+    display: inline-block;
+    font-size: 2.25em;
+    line-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #5D9AB2;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    display: block;
+    font-size: 1.5em;
+    padding: 15px;
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+ * マウスカーソルを持ってきた時のエフェクト
+ */
+header nav a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+/*
+ * ずれを補正するためのcss
+ */
+.revise {
+    margin-top: -80px !important;
+    padding-top: 150px !important;
+}
+
+@media all and (max-width: 799px) {
+    header > div > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header button {
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 1.5em;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    header button:hover {
+        opacity: 0.3;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+@media all and (min-width: 800px) {
+    header > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header ul {
+        display: flex;
+    }
+    /*
+     * ボタンの非表示
+     */
+    header button {
+        display: none;
+    }
+
+    header nav {
+        display: block !important;
+    }
+
+}
+
+/****************
+ * フッター
+ */
+
+footer {
+    /*
+     * 背景暗め
+     */
+    background: #E6E6FA;
+    
+     position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    box-shadow: 10px 10px 8px 8px #777;
+}
+
+footer > div {
+    padding: 40px 20px;
+}
+
+footer > div > .logo > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat' sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+}
+
+footer > div > .logo > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+
+@media all and (max-width: 800px) {
+    footer {
+        position: static;
+        width: 100%;
+        height: 100px;
+        padding: 0px;
+        box-shadow: 0px 0px 0px 0px #777;
+    }
+}
+
+/*****************
+ * トップレイアウト
+ */
+.block {
+    /*
+     * 外側マージン下側を100pxにする
+     */
+    margin-bottom: 100px;
+}
+
+@media all and (max-width: 800px) {
+    .block {
+        margin-bottom: 5px;
+    }
+}
+
+/**
+ * ブロック内のtop
+ */
+.block > .top {
+    /*
+     * フレキシブルレイアウト
+     */
+    display: flex;
+    margin-bottom: 100px;
+    /*
+     * 中央寄せ
+     */
+    align-items: center;
+}
+
+/*
+ * ブロック内のトップの左
+ */
+.block .top .left {
+    padding-top: 50px;
+    padding-left: 10px;
+}
+/*
+ * ブロック内のトップの右
+ */
+.block .top .right {
+    padding-top: 20px;
+    margin-left: auto;
+    width: 750px;
+}
+
+@media all and (max-width: 800px) {
+    .block > .top {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .block .top .left {
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+    .block .top .right {
+        padding-top: 20px;
+        width: 100%;
+        margin-right: auto;
+    }
+    img.topImg {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*
+ * このクラスを使った時植えらへんに20pxの空間ができる
+ */
+.block > .component {
+}
+
+/*
+ * 中央にする
+ */
+.block > .component .top {
+    text-align: center;
+}
+
+/*
+ * 服数列として表示されるコンポーネントレイアウト comBK
+ * sp. flexible layout
+ */
+.block > .component > .comBK {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    justify-content: space-around;
+}
+/*
+ * comBK の子要素 div の設定
+ */
+.block > .component > .comBK > div {
+    width: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px 0.2px #777;
+}
+/*
+ * comBK の子要素 div の全ての子要素の設定
+ */
+.block > .component > .comBK > div > * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+ * 子要素の内，初めの子要素の設定
+ */
+.block > .component > .comBK > div > *:first-child {
+    margin-bottom: 30px;
+}
+
+.block > .component > .comBK > div > p {
+    text-align: center;
+    /**
+     *     折り返す
+     */
+    word-wrap: break-word;
+    color: #696969;
+}
+
+@media all and (max-width: 800px) and (min-width: 460px) {
+    .block > .component > .comBK {
+        display: block;
+    }
+    .block > .component > .comBK > div {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5em;
+        padding-top: 2em;
+        padding-bottom: 5em;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .block > .component > .comBK {
+        display: block;
+    }
+    .block > .component > .comBK > div {
+        width: 100%;
+        margin-bottom: 5em;
+        padding-top: 1em;
+        padding-bottom: 3em;
+        background: #FFFFFF;
+    }
+}
+
+/*
+ * 左側がテキスト，右側が画像となるようなコンポーネントレイアウト
+ * sp.grid layout
+ */
+.block > .component > .comBK2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block > .component > .comBK2 > div.inner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    background: #FFFFFF;
+}
+
+.block > .component > .comBK2 > div.inner > div.lside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.block > .component > .comBK2 > div.inner > div.lside > div {
+
+}
+.block > .component > .comBK2 > div.inner > div.rside {
+    width: 50%;
+}
+
+.block > .component > .comBK2 > div.inner > div.rside > img {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (max-width: 800px) {
+    .block > .component > .comBK2 > div.inner {
+        width: 100%;
+    }
+}
+
+/**
+ *　リストに罫線を自動設定できるコンポーネントレイアウト
+ */
+.block > .component > .comBK2 > div.inner2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    background: #F5F5F5;
+    box-shadow: 0px 0px 3px 0.2px #777;
+}
+
+.block > .component > .comBK2 > div.inner2 > * {
+    display: block;
+}
+
+.block > .component > .comBK2 > div.inner2 > h2 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.block > .component > .comBK2 > div.inner2 > ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.block > .component > .comBK2 > div.inner2 > ul > li {
+    border-bottom: solid 1px #4169e1;
+    padding-left: 50px;
+}
+
+@media all and (max-width: 800px) {
+    .block > .component > .comBK2 > div.inner2 {
+        width: 100%;
+    }
+}
+
+/**************************
+ * ブロックレイアウトの適用
+ */
+.block > .component > .comBK2 > div.inner3 {
+    display: grid;
+    width: 800px;
+    grid-template-rows: 40px 40px 40px 40px;
+    grid-template-columns: 40% 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #4169E1;
+}
+
+.block > .compenent > .comBK2 > div.inner3 > div.left:nth-child(1) {
+    grid-row: 1 /2;
+    grid-column: 1 /2;
+}
+
+.block > .compenent > .comBK2 > div.inner3 > div.left:nth-child(2) {
+    grid-row: 2 /3;
+    grid-column: 1 /2;
+}
+
+.block > .compenent > .comBK2 > div.inner3 > div.left:nth-child(3) {
+    grid-row: 3 /4;
+    grid-column: 1 /2;
+}
+
+.block > .compenent > .comBK2 > div.inner3 > div.left:nth-child(4) {
+    grid-row: 4 /5;
+    grid-column: 1 /2;
+}
+
+.block > .compenent > .comBK2 > div.inner3 > div.right {
+    grid-row: 1 /5;
+    grid-column: 2 /3;
+}
