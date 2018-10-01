@@ -11,4 +11,10 @@
 
 ## How to use
 利用方法はとても簡単．
-'git clone'
+'''
+git clone https://github.com/HirokiMorikawa/web_css.git
+'''
+をターミナルで打つだけ．
+
+## Others
+改造自由です．
