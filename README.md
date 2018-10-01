@@ -11,9 +11,7 @@
 
 ## How to use
 利用方法はとても簡単．
-'''
 git clone https://github.com/HirokiMorikawa/web_css.git
-'''
 をターミナルで打つだけ．
 
 ## Others
